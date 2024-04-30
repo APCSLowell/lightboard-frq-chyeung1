@@ -12,16 +12,10 @@ public class LightBoard
   {
     /* to be implemented in part (a) */
     lights = new boolean[numRows][numCols];
-    int index = 0;
-    for(int i = 0; i < numRows; i++){
-      while(i < numCols){
-        int probability = (int)Math.random() * 10;
-        if(probability <= 4) lights[i][index] = true;
-        else lights[i][index] = false;
-        index++;
-      }
-      index = 0;
-    }
+    for(int i = 0; i < numRows; i++)
+      for(int j = 0; j < numCols; j++)
+        if(Math.random() <= 0.4)
+          lights[r][c] = true;
   }
 
   /** Evaluates a light in row index row and column index col and returns a status
