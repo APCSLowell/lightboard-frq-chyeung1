@@ -15,7 +15,7 @@ public class LightBoard
     for(int i = 0; i < numRows; i++)
       for(int j = 0; j < numCols; j++)
         if(Math.random() <= 0.4)
-          lights[r][c] = true;
+          lights[i][j] = true;
   }
 
   /** Evaluates a light in row index row and column index col and returns a status
