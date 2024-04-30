@@ -34,9 +34,9 @@ public class LightBoard
       for(int i = 0; i < col; i++)
         if(lights[row][i]) count++;
      if(lights[row][col]){
-       return !count%2;
+       return (count % 2 != 0);
        } else if(!lights[row][col]) 
-         return count%3;
+         return count % 3 == 0;
      return lights[row][col];
        
  
